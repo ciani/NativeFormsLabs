@@ -215,6 +215,7 @@
   <ItemGroup>
     <Compile Include="AkavacheSqliteLinkerOverride.cs" />
     <Compile Include="Controls\UICameraPreview.cs" />
+    <Compile Include="CustomRenderers\CameraPreviewCustomRenderer.cs" />
     <Compile Include="CustomRenderers\CustomButtonRenderer.cs" />
     <Compile Include="CustomRenderers\MyCustomControlRenderer.cs" />
     <Compile Include="Effects\UnderlineEffect.cs" />

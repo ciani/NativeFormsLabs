@@ -6,7 +6,7 @@
     public class CameraPreview : View
     {
         public static readonly BindableProperty CameraProperty = BindableProperty.Create(
-            propertyName: "Camera",
+            propertyName: nameof(Camera),
             returnType: typeof(CameraOptions),
             declaringType: typeof(CameraPreview),
             defaultValue: CameraOptions.Rear);
