@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapDetailView">
+            <connections>
+                <outlet property="LoadingRing" destination="w3z-am-1nF" id="name-outlet-w3z-am-1nF"/>
+                <outlet property="MapPosition" destination="DLb-Yj-eUG" id="name-outlet-DLb-Yj-eUG"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="DLb-Yj-eUG">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </mapView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="w3z-am-1nF">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <color key="color" red="0.043137254899999998" green="0.57647058819999997" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="w3z-am-1nF" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="Nxf-2F-McA"/>
+                <constraint firstItem="DLb-Yj-eUG" firstAttribute="top" secondItem="2" secondAttribute="top" id="PjB-Km-Rsb"/>
+                <constraint firstAttribute="bottom" secondItem="DLb-Yj-eUG" secondAttribute="bottom" id="XHr-O2-f8u"/>
+                <constraint firstItem="DLb-Yj-eUG" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="kMV-KM-PF3"/>
+                <constraint firstAttribute="trailing" secondItem="DLb-Yj-eUG" secondAttribute="trailing" id="ucM-Vv-0Ps"/>
+                <constraint firstItem="w3z-am-1nF" firstAttribute="centerY" secondItem="2" secondAttribute="centerY" id="ziJ-OM-hpc"/>
+            </constraints>
+            <point key="canvasLocation" x="106.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

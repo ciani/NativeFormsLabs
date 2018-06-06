@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NativeFormsLabs.Core.Features.Main.MainXFView"
+             xmlns:converter ="clr-namespace:NativeFormsLabs.Core.Converters"             
+             BackgroundColor="Green">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:HexColorToXamarinFormColorConverter x:Key="HexColorToXamarinFormColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        
+        <ScrollView Padding="30">
+            <ListView CachingStrategy="RecycleElement" SeparatorVisibility="None" HasUnevenRows="True" 
+                      IsRefreshing="{Binding IsLoading}"
+                      VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                      ItemsSource="{Binding ItemsList}" SelectedItem="{Binding SelectedItem}">
+                <ListView.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color" Android="Wheat" WinPhone="White" iOS="Transparent"/>
+                </ListView.BackgroundColor>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Name}" TextColor="Accent"/>
+                                <Label Text="{Binding Color}" TextColor="{Binding Color, Converter={StaticResource HexColorToXamarinFormColorConverter}}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

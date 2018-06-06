@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainView">
+            <connections>
+                <outlet property="LoadingRing" destination="mp0-Pi-qTf" id="name-outlet-mp0-Pi-qTf"/>
+                <outlet property="LstItems" destination="Hg3-2I-PAk" id="name-outlet-Hg3-2I-PAk"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hg3-2I-PAk">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge"  animating="YES"  translatesAutoresizingMaskIntoConstraints="NO" id="mp0-Pi-qTf">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <color key="color" red="0.043137254899999998" green="0.57647058819999997" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Hg3-2I-PAk" secondAttribute="bottom" id="0xl-1D-gzo"/>
+                <constraint firstItem="mp0-Pi-qTf" firstAttribute="centerY" secondItem="2" secondAttribute="centerY" id="1RD-Ve-hs0"/>
+                <constraint firstItem="Hg3-2I-PAk" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="3dV-7v-2F4"/>
+                <constraint firstAttribute="trailing" secondItem="Hg3-2I-PAk" secondAttribute="trailing" id="Uc7-LA-hmp"/>
+                <constraint firstItem="mp0-Pi-qTf" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="VUT-C8-GnT"/>
+                <constraint firstItem="Hg3-2I-PAk" firstAttribute="top" secondItem="2" secondAttribute="top" id="cu3-g7-eYE"/>
+            </constraints>
+            <point key="canvasLocation" x="106.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

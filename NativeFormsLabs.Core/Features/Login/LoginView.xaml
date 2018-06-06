@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:NativeFormsLabs.Core.Behaviors"
+             xmlns:effect="clr-namespace:NativeFormsLabs.Core.Effects"
+             xmlns:controls="clr-namespace:NativeFormsLabs.Core.Controls"
+             x:Name="page"
+             x:Class="NativeFormsLabs.Core.Features.Login.LoginView">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20"
+                         VerticalOptions="FillAndExpand" 
+                         HorizontalOptions="FillAndExpand">
+                <Label Text="Escribe tu usuario">
+                    <Label.Effects>
+                        <effect:UnderlineEffect/>
+                    </Label.Effects>
+                </Label>
+                <Entry Text="{Binding Username}"
+                       Placeholder="Usuario">
+                    <Entry.Behaviors>
+                        <behaviors:OnFocusBehavior/>
+                        <behaviors:UnFocusBehavior/>
+                        <behaviors:MaxNumValidationBehavior MinValue="0" MaxValue="20"/>
+                    </Entry.Behaviors>
+                    <Entry.Effects>
+                        <effect:FocusEffect/>
+                    </Entry.Effects>
+                </Entry>
+                <Label Text="Escribe tu password">
+                    <Label.Effects>
+                        <effect:UnderlineEffect/>
+                    </Label.Effects>
+                </Label>
+                <Entry Text="{Binding Password}" IsPassword="True" Placeholder="Password">
+                    <Entry.Behaviors>
+                        <behaviors:OnFocusBehavior/>
+                        <behaviors:UnFocusBehavior/>
+                    </Entry.Behaviors>
+                </Entry>
+                <controls:ButtonWithActivityIndicator TextToShow="My login" 
+                                                      ActionCommand="{Binding BindingContext.DoLoginCommand, Source={x:Reference page}}"
+                                                      IsLoading="{Binding BindingContext.IsLoading, Source={x:Reference page}}" />
+                <controls:CameraPreview Camera="Rear" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
