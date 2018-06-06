@@ -41,7 +41,6 @@
                 <controls:ButtonWithActivityIndicator TextToShow="My login" 
                                                       ActionCommand="{Binding BindingContext.DoLoginCommand, Source={x:Reference page}}"
                                                       IsLoading="{Binding BindingContext.IsLoading, Source={x:Reference page}}" />
-                <controls:CameraPreview Camera="Rear" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
 
             </StackLayout>
         </ScrollView>
