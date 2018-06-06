@@ -1,12 +1,12 @@
 ﻿[assembly: Xamarin.Forms.ExportRenderer(typeof(NativeFormsLabs.Core.Controls.CameraPreview)
-                                     , typeof(NativeFormsLabs.iOS.CustomRenderers.CameraPreviewCustomRenderer))]
+                                     , typeof(NativeFormsLabs.iOS.CustomRenderers.CameraPreviewRenderer))]
 namespace NativeFormsLabs.iOS.CustomRenderers
 {
     using System.ComponentModel;
     using NativeFormsLabs.Core.Controls;
     using NativeFormsLabs.iOS.Controls;
     using Xamarin.Forms.Platform.iOS;
-    public class CameraPreviewCustomRenderer : ViewRenderer<CameraPreview, UICameraPreview>
+    public class CameraPreviewRenderer : ViewRenderer<CameraPreview, UICameraPreview>
     {
         private UICameraPreview uiCameraPreview;
         protected override void OnElementChanged(ElementChangedEventArgs<CameraPreview> e)

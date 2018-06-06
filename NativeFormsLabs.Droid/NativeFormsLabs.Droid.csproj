@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\CameraPreview.cs" />
+    <Compile Include="CustomRenderers\CameraPreviewRenderer.cs" />
     <Compile Include="CustomRenderers\CustomButtonRenderer.cs" />
     <Compile Include="Effects\FocusEffect.cs" />
     <Compile Include="Effects\UnderlineEffect.cs" />
@@ -155,12 +156,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NativeFormsLabs.Core\NativeFormsLabs.Core.csproj">
-      <Project>{0ba14f2c-fd8a-4239-8121-ff0e4905e48d}</Project>
-      <Name>NativeFormsLabs.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\Login.axml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
     </AndroidResource>
@@ -179,6 +174,12 @@
     <AndroidResource Include="Resources\layout\MapDetail.axml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NativeFormsLabs.Core\NativeFormsLabs.Core.csproj">
+      <Project>{0ba14f2c-fd8a-4239-8121-ff0e4905e48d}</Project>
+      <Name>NativeFormsLabs.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

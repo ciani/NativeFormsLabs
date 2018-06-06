@@ -92,6 +92,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomRenderes\CameraPreviewRenderer.cs" />
     <Compile Include="Effects\FocusEffect.cs" />
     <Compile Include="Features\Login\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
@@ -180,9 +181,7 @@
       <Name>NativeFormsLabs.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CustomRenderes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="..\NativeFormsLabs\NativeFormsLabs.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
