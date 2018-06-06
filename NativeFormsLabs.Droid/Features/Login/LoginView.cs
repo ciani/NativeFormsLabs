@@ -10,13 +10,12 @@
     using Droid.Services;
     using ReactiveUI;
     using System.Net.Http;
-    using System;
     using Xamarin.Android.Net;
-    using Xamarin.Forms.Platform.Android;
     using Xamarin.Forms;
+    using Xamarin.Forms.Platform.Android;
 
     [Activity(Label = "LoginView", MainLauncher = true)]
-	public class LoginView : ReactiveActivity<LoginViewModel>
+	public class LoginView :Activity
 	{
 		public LoginView()
 		{
@@ -65,7 +64,7 @@
 
             var mainPage = new NativeFormsLabs.Core.Features.Login.LoginView();
             mainPage.BindingContext = ServiceLocator.Current.Resolve<LoginViewModel>();
-            var mainPageFragment = mainPage.CreateFragment(this);
+            var mainPageFragment = mainPage.CreateSupportFragment(this);
 
             FragmentManager
                 .BeginTransaction()

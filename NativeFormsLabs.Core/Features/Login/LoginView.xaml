@@ -8,15 +8,19 @@
              x:Class="NativeFormsLabs.Core.Features.Login.LoginView">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="20"
+            <StackLayout x:Name="MainStack" Padding="20"
                          VerticalOptions="FillAndExpand" 
                          HorizontalOptions="FillAndExpand">
-                <Label Text="Escribe tu usuario">
+                <StackLayout.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" Android="20" iOS="20"/>
+                </StackLayout.Margin>
+                   
+                <Label x:Name="LblEntry" Text="Escribe tu usuario">
                     <Label.Effects>
                         <effect:UnderlineEffect/>
                     </Label.Effects>
                 </Label>
-                <Entry Text="{Binding Username}"
+                <Entry x:Name="EntryUser" Text="{Binding Username}"
                        Placeholder="Usuario">
                     <Entry.Behaviors>
                         <behaviors:OnFocusBehavior/>
@@ -27,7 +31,7 @@
                         <effect:FocusEffect/>
                     </Entry.Effects>
                 </Entry>
-                <Label Text="Escribe tu password">
+                <Label x:Name="LblPassword" Text="Escribe tu password">
                     <Label.Effects>
                         <effect:UnderlineEffect/>
                     </Label.Effects>
@@ -38,13 +42,12 @@
                         <behaviors:UnFocusBehavior/>
                     </Entry.Behaviors>
                 </Entry>
-                <controls:ButtonWithActivityIndicator TextToShow="My login" 
+                <controls:ButtonWithActivityIndicator x:Name="Button" TextToShow="My login" Opacity="0" 
                                                       ActionCommand="{Binding BindingContext.DoLoginCommand, Source={x:Reference page}}"
                                                       IsLoading="{Binding BindingContext.IsLoading
                     , Source={x:Reference page}}" />
                 
-                <controls:CameraPreview Camera="Rear" VerticalOptions="FillAndExpand"  
-                                        HorizontalOptions="FillAndExpand"/>
+                
 
             </StackLayout>
         </ScrollView>
